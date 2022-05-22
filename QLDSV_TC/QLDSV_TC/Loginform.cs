@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QLDSV_TC
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class Loginform : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public Loginform()
         {
             InitializeComponent();
         }
