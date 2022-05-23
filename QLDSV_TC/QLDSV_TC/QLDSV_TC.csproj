@@ -36,6 +36,7 @@
     <Reference Include="DevExpress.Data.v19.2" />
     <Reference Include="DevExpress.Utils.v19.2" />
     <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
     <Reference Include="DevExpress.Printing.v19.2.Core" />
     <Reference Include="System" />
@@ -50,17 +51,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DANGKY.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DANGKY.Designer.cs">
+      <DependentUpon>DANGKY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HOCPHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOCPHI.Designer.cs">
+      <DependentUpon>HOCPHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loginform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loginform.Designer.cs">
+      <DependentUpon>Loginform.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="QLDIEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDIEM.Designer.cs">
+      <DependentUpon>QLDIEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDSLTC.Designer.cs">
+      <DependentUpon>QLDSLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDSTK.Designer.cs">
+      <DependentUpon>QLDSTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLGIANGVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLGIANGVIEN.Designer.cs">
+      <DependentUpon>QLGIANGVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLLopHoc.Designer.cs">
+      <DependentUpon>QLLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLSINHVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLSINHVIEN.Designer.cs">
+      <DependentUpon>QLSINHVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonMenu.Designer.cs">
+      <DependentUpon>RibbonMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="THONGTINTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THONGTINTK.Designer.cs">
+      <DependentUpon>THONGTINTK.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Loginform.resx">
+      <DependentUpon>Loginform.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -70,6 +132,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QLDSLTC.resx">
+      <DependentUpon>QLDSLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLGIANGVIEN.resx">
+      <DependentUpon>QLGIANGVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLSINHVIEN.resx">
+      <DependentUpon>QLSINHVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonMenu.resx">
+      <DependentUpon>RibbonMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="THONGTINTK.resx">
+      <DependentUpon>THONGTINTK.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

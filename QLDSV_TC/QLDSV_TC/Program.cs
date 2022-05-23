@@ -18,7 +18,8 @@ namespace QLDSV_TC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loginform());
+            //Application.Run(new Loginform());
+            Application.Run(new RibbonMenu());
         }
     }
 }
