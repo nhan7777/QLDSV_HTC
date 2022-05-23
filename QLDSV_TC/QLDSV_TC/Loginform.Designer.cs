@@ -51,14 +51,14 @@ namespace QLDSV_TC
             this.label2.TabIndex = 1;
             this.label2.Text = "Password";
             // 
-            // Form1
+            // Loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 324);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Loginform";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

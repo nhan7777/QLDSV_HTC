@@ -51,6 +51,8 @@ namespace QLDSV_TC
             this.xtraTabbedMdiManagerHome = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItemQLDSTK = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItemClose = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManagerHome)).BeginInit();
             this.SuspendLayout();
@@ -70,9 +72,10 @@ namespace QLDSV_TC
             this.barButtonItemDANGKYLTC,
             this.barButtonItemQLTK,
             this.barButtonItem9,
-            this.barButtonItemQLDSTK});
+            this.barButtonItemQLDSTK,
+            this.barButtonItemClose});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 11;
+            this.ribbon.MaxItemId = 12;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageQLDSV,
@@ -165,7 +168,8 @@ namespace QLDSV_TC
             // 
             this.ribbonPageQLDSV.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroupQLDSV,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup4});
             this.ribbonPageQLDSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageQLDSV.ImageOptions.Image")));
             this.ribbonPageQLDSV.Name = "ribbonPageQLDSV";
             this.ribbonPageQLDSV.Text = "QUẢN LÝ DỮ LIỆU";
@@ -232,6 +236,20 @@ namespace QLDSV_TC
             this.barButtonItemQLDSTK.Name = "barButtonItemQLDSTK";
             this.barButtonItemQLDSTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemQLDSTK_ItemClick);
             // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItemClose);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            // 
+            // barButtonItemClose
+            // 
+            this.barButtonItemClose.Caption = "Thoát";
+            this.barButtonItemClose.Id = 11;
+            this.barButtonItemClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItemClose.Name = "barButtonItemClose";
+            this.barButtonItemClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemClose_ItemClick);
+            // 
             // RibbonMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,5 +291,7 @@ namespace QLDSV_TC
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManagerHome;
         private DevExpress.XtraBars.BarButtonItem barButtonItemQLDSTK;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemClose;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
