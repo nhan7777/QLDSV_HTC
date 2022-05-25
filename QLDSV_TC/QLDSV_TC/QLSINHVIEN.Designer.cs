@@ -30,7 +30,6 @@ namespace QLDSV_TC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLSINHVIEN));
             System.Windows.Forms.Label nGAYSINHLabel;
             System.Windows.Forms.Label dANGHIHOCLabel;
             System.Windows.Forms.Label mALOPLabel;
@@ -39,6 +38,7 @@ namespace QLDSV_TC
             System.Windows.Forms.Label tENLabel;
             System.Windows.Forms.Label hOLabel;
             System.Windows.Forms.Label mASVLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLSINHVIEN));
             this.qLDSV_TC_HOME = new QLDSV_TC.QLDSV_TC_HOME();
             this.sINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sINHVIENTableAdapter = new QLDSV_TC.QLDSV_TC_HOMETableAdapters.SINHVIENTableAdapter();
@@ -111,6 +111,78 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.sINHVIENGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nGAYSINHLabel
+            // 
+            nGAYSINHLabel.AutoSize = true;
+            nGAYSINHLabel.Location = new System.Drawing.Point(265, 91);
+            nGAYSINHLabel.Name = "nGAYSINHLabel";
+            nGAYSINHLabel.Size = new System.Drawing.Size(62, 13);
+            nGAYSINHLabel.TabIndex = 15;
+            nGAYSINHLabel.Text = "NGAYSINH:";
+            // 
+            // dANGHIHOCLabel
+            // 
+            dANGHIHOCLabel.AutoSize = true;
+            dANGHIHOCLabel.Location = new System.Drawing.Point(255, 165);
+            dANGHIHOCLabel.Name = "dANGHIHOCLabel";
+            dANGHIHOCLabel.Size = new System.Drawing.Size(72, 13);
+            dANGHIHOCLabel.TabIndex = 14;
+            dANGHIHOCLabel.Text = "TRẠNG THÁI:";
+            // 
+            // mALOPLabel
+            // 
+            mALOPLabel.AutoSize = true;
+            mALOPLabel.Location = new System.Drawing.Point(282, 124);
+            mALOPLabel.Name = "mALOPLabel";
+            mALOPLabel.Size = new System.Drawing.Size(45, 13);
+            mALOPLabel.TabIndex = 12;
+            mALOPLabel.Text = "MALOP:";
+            // 
+            // dIACHILabel
+            // 
+            dIACHILabel.AutoSize = true;
+            dIACHILabel.Location = new System.Drawing.Point(280, 50);
+            dIACHILabel.Name = "dIACHILabel";
+            dIACHILabel.Size = new System.Drawing.Size(47, 13);
+            dIACHILabel.TabIndex = 8;
+            dIACHILabel.Text = "DIACHI:";
+            // 
+            // pHAILabel
+            // 
+            pHAILabel.AutoSize = true;
+            pHAILabel.Location = new System.Drawing.Point(55, 165);
+            pHAILabel.Name = "pHAILabel";
+            pHAILabel.Size = new System.Drawing.Size(35, 13);
+            pHAILabel.TabIndex = 6;
+            pHAILabel.Text = "PHAI:";
+            // 
+            // tENLabel
+            // 
+            tENLabel.AutoSize = true;
+            tENLabel.Location = new System.Drawing.Point(60, 128);
+            tENLabel.Name = "tENLabel";
+            tENLabel.Size = new System.Drawing.Size(30, 13);
+            tENLabel.TabIndex = 4;
+            tENLabel.Text = "TEN:";
+            // 
+            // hOLabel
+            // 
+            hOLabel.AutoSize = true;
+            hOLabel.Location = new System.Drawing.Point(64, 87);
+            hOLabel.Name = "hOLabel";
+            hOLabel.Size = new System.Drawing.Size(26, 13);
+            hOLabel.TabIndex = 2;
+            hOLabel.Text = "HO:";
+            // 
+            // mASVLabel
+            // 
+            mASVLabel.AutoSize = true;
+            mASVLabel.Location = new System.Drawing.Point(52, 50);
+            mASVLabel.Name = "mASVLabel";
+            mASVLabel.Size = new System.Drawing.Size(38, 13);
+            mASVLabel.TabIndex = 0;
+            mASVLabel.Text = "MASV:";
             // 
             // qLDSV_TC_HOME
             // 
@@ -262,7 +334,7 @@ namespace QLDSV_TC
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1026, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(1005, 24);
             // 
             // barDockControlBottom
             // 
@@ -270,7 +342,7 @@ namespace QLDSV_TC
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 483);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1026, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1005, 0);
             // 
             // barDockControlLeft
             // 
@@ -284,7 +356,7 @@ namespace QLDSV_TC
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1026, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1005, 24);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 459);
             // 
@@ -326,18 +398,9 @@ namespace QLDSV_TC
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(395, 24);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(631, 220);
+            this.groupControl1.Size = new System.Drawing.Size(610, 220);
             this.groupControl1.TabIndex = 13;
             this.groupControl1.Text = "THÔNG TIN SINH VIÊN";
-            // 
-            // nGAYSINHLabel
-            // 
-            nGAYSINHLabel.AutoSize = true;
-            nGAYSINHLabel.Location = new System.Drawing.Point(265, 91);
-            nGAYSINHLabel.Name = "nGAYSINHLabel";
-            nGAYSINHLabel.Size = new System.Drawing.Size(62, 13);
-            nGAYSINHLabel.TabIndex = 15;
-            nGAYSINHLabel.Text = "NGAYSINH:";
             // 
             // nGAYSINHDateTimePicker
             // 
@@ -348,15 +411,6 @@ namespace QLDSV_TC
             this.nGAYSINHDateTimePicker.Name = "nGAYSINHDateTimePicker";
             this.nGAYSINHDateTimePicker.Size = new System.Drawing.Size(129, 21);
             this.nGAYSINHDateTimePicker.TabIndex = 16;
-            // 
-            // dANGHIHOCLabel
-            // 
-            dANGHIHOCLabel.AutoSize = true;
-            dANGHIHOCLabel.Location = new System.Drawing.Point(255, 165);
-            dANGHIHOCLabel.Name = "dANGHIHOCLabel";
-            dANGHIHOCLabel.Size = new System.Drawing.Size(72, 13);
-            dANGHIHOCLabel.TabIndex = 14;
-            dANGHIHOCLabel.Text = "TRẠNG THÁI:";
             // 
             // dANGHIHOCRadioButton
             // 
@@ -369,15 +423,6 @@ namespace QLDSV_TC
             this.dANGHIHOCRadioButton.Text = "ĐANG NGHỈ HỌC";
             this.dANGHIHOCRadioButton.UseVisualStyleBackColor = true;
             // 
-            // mALOPLabel
-            // 
-            mALOPLabel.AutoSize = true;
-            mALOPLabel.Location = new System.Drawing.Point(282, 124);
-            mALOPLabel.Name = "mALOPLabel";
-            mALOPLabel.Size = new System.Drawing.Size(45, 13);
-            mALOPLabel.TabIndex = 12;
-            mALOPLabel.Text = "MALOP:";
-            // 
             // mALOPTextEdit
             // 
             this.mALOPTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sINHVIENBindingSource1, "MALOP", true));
@@ -386,15 +431,6 @@ namespace QLDSV_TC
             this.mALOPTextEdit.Name = "mALOPTextEdit";
             this.mALOPTextEdit.Size = new System.Drawing.Size(129, 20);
             this.mALOPTextEdit.TabIndex = 13;
-            // 
-            // dIACHILabel
-            // 
-            dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(280, 50);
-            dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(47, 13);
-            dIACHILabel.TabIndex = 8;
-            dIACHILabel.Text = "DIACHI:";
             // 
             // dIACHITextEdit
             // 
@@ -405,15 +441,6 @@ namespace QLDSV_TC
             this.dIACHITextEdit.Size = new System.Drawing.Size(230, 20);
             this.dIACHITextEdit.TabIndex = 9;
             // 
-            // pHAILabel
-            // 
-            pHAILabel.AutoSize = true;
-            pHAILabel.Location = new System.Drawing.Point(55, 165);
-            pHAILabel.Name = "pHAILabel";
-            pHAILabel.Size = new System.Drawing.Size(35, 13);
-            pHAILabel.TabIndex = 6;
-            pHAILabel.Text = "PHAI:";
-            // 
             // pHAIComboBox
             // 
             this.pHAIComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sINHVIENBindingSource1, "PHAI", true));
@@ -422,15 +449,6 @@ namespace QLDSV_TC
             this.pHAIComboBox.Name = "pHAIComboBox";
             this.pHAIComboBox.Size = new System.Drawing.Size(100, 21);
             this.pHAIComboBox.TabIndex = 7;
-            // 
-            // tENLabel
-            // 
-            tENLabel.AutoSize = true;
-            tENLabel.Location = new System.Drawing.Point(60, 128);
-            tENLabel.Name = "tENLabel";
-            tENLabel.Size = new System.Drawing.Size(30, 13);
-            tENLabel.TabIndex = 4;
-            tENLabel.Text = "TEN:";
             // 
             // tENTextEdit
             // 
@@ -441,15 +459,6 @@ namespace QLDSV_TC
             this.tENTextEdit.Size = new System.Drawing.Size(100, 20);
             this.tENTextEdit.TabIndex = 5;
             // 
-            // hOLabel
-            // 
-            hOLabel.AutoSize = true;
-            hOLabel.Location = new System.Drawing.Point(64, 87);
-            hOLabel.Name = "hOLabel";
-            hOLabel.Size = new System.Drawing.Size(26, 13);
-            hOLabel.TabIndex = 2;
-            hOLabel.Text = "HO:";
-            // 
             // hOTextEdit
             // 
             this.hOTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sINHVIENBindingSource1, "HO", true));
@@ -458,15 +467,6 @@ namespace QLDSV_TC
             this.hOTextEdit.Name = "hOTextEdit";
             this.hOTextEdit.Size = new System.Drawing.Size(100, 20);
             this.hOTextEdit.TabIndex = 3;
-            // 
-            // mASVLabel
-            // 
-            mASVLabel.AutoSize = true;
-            mASVLabel.Location = new System.Drawing.Point(52, 50);
-            mASVLabel.Name = "mASVLabel";
-            mASVLabel.Size = new System.Drawing.Size(38, 13);
-            mASVLabel.TabIndex = 0;
-            mASVLabel.Text = "MASV:";
             // 
             // mASVTextEdit
             // 
@@ -537,7 +537,7 @@ namespace QLDSV_TC
             this.sINHVIENGridControl.MainView = this.gridView2;
             this.sINHVIENGridControl.MenuManager = this.barManager1;
             this.sINHVIENGridControl.Name = "sINHVIENGridControl";
-            this.sINHVIENGridControl.Size = new System.Drawing.Size(1026, 239);
+            this.sINHVIENGridControl.Size = new System.Drawing.Size(1005, 239);
             this.sINHVIENGridControl.TabIndex = 12;
             this.sINHVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -618,7 +618,7 @@ namespace QLDSV_TC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 483);
+            this.ClientSize = new System.Drawing.Size(1005, 483);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.lOPGridControl);
             this.Controls.Add(this.sINHVIENGridControl);
