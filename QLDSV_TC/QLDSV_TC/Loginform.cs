@@ -150,6 +150,7 @@ namespace QLDSV_TC
             MessageBox.Show("Đăng nhập thành công !!!");
             Form f = new RibbonMenu();
             f.ShowDialog();
+            this.Close();
         }
 
         private void tENPMComboBoxPHANMANH_SelectedIndexChanged(object sender, EventArgs e)
