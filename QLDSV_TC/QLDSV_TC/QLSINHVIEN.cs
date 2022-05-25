@@ -28,10 +28,16 @@ namespace QLDSV_TC
 
         private void QLSINHVIEN_Load(object sender, EventArgs e)
         {
+            qLDSV_TC_HOME.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'qLDSV_TC_HOME.LOP' table. You can move, or remove it, as needed.
             this.lOPTableAdapter.Fill(this.qLDSV_TC_HOME.LOP);
             // TODO: This line of code loads data into the 'qLDSV_TC_HOME.SINHVIEN' table. You can move, or remove it, as needed.
             this.sINHVIENTableAdapter.Fill(this.qLDSV_TC_HOME.SINHVIEN);
+
+        }
+
+        private void lOPGridControl_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -48,7 +48,7 @@ namespace QLDSV_TC
             this.vDSLTCBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonIsSV = new System.Windows.Forms.RadioButton();
             tENPMLabel = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
@@ -59,6 +59,39 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tENPMLabel
+            // 
+            tENPMLabel.AutoSize = true;
+            tENPMLabel.Font = new System.Drawing.Font("Tahoma", 9.25F);
+            tENPMLabel.ForeColor = System.Drawing.Color.Navy;
+            tENPMLabel.Location = new System.Drawing.Point(91, 52);
+            tENPMLabel.Name = "tENPMLabel";
+            tENPMLabel.Size = new System.Drawing.Size(82, 16);
+            tENPMLabel.TabIndex = 1;
+            tENPMLabel.Text = "PHÂN QUYỀN";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Tahoma", 9.25F);
+            label3.ForeColor = System.Drawing.Color.Navy;
+            label3.Location = new System.Drawing.Point(91, 93);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(72, 16);
+            label3.TabIndex = 1;
+            label3.Text = "USERNAME";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Tahoma", 9.25F);
+            label4.ForeColor = System.Drawing.Color.Navy;
+            label4.Location = new System.Drawing.Point(91, 132);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(76, 16);
+            label4.TabIndex = 1;
+            label4.Text = "PASSWORD";
             // 
             // qLDSV_TC_HOME
             // 
@@ -89,17 +122,6 @@ namespace QLDSV_TC
             this.tableAdapterManager1.SINHVIENTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = QLDSV_TC.QLDSV_TC_HOMETableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tENPMLabel
-            // 
-            tENPMLabel.AutoSize = true;
-            tENPMLabel.Font = new System.Drawing.Font("Tahoma", 9.25F);
-            tENPMLabel.ForeColor = System.Drawing.Color.Navy;
-            tENPMLabel.Location = new System.Drawing.Point(91, 52);
-            tENPMLabel.Name = "tENPMLabel";
-            tENPMLabel.Size = new System.Drawing.Size(82, 16);
-            tENPMLabel.TabIndex = 1;
-            tENPMLabel.Text = "PHÂN QUYỀN";
-            // 
             // tENPMComboBoxPHANMANH
             // 
             this.tENPMComboBoxPHANMANH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.v_DSPHANMANHBindingSource1, "TENPM", true));
@@ -113,28 +135,6 @@ namespace QLDSV_TC
             this.tENPMComboBoxPHANMANH.Size = new System.Drawing.Size(121, 21);
             this.tENPMComboBoxPHANMANH.TabIndex = 2;
             this.tENPMComboBoxPHANMANH.SelectedIndexChanged += new System.EventHandler(this.tENPMComboBoxPHANMANH_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Tahoma", 9.25F);
-            label3.ForeColor = System.Drawing.Color.Navy;
-            label3.Location = new System.Drawing.Point(91, 93);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(72, 16);
-            label3.TabIndex = 1;
-            label3.Text = "USERNAME";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Tahoma", 9.25F);
-            label4.ForeColor = System.Drawing.Color.Navy;
-            label4.Location = new System.Drawing.Point(91, 132);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(76, 16);
-            label4.TabIndex = 1;
-            label4.Text = "PASSWORD";
             // 
             // textBoxToUsername
             // 
@@ -162,7 +162,7 @@ namespace QLDSV_TC
             this.buttonToLogin.TabIndex = 4;
             this.buttonToLogin.Text = "LOGIN";
             this.buttonToLogin.UseVisualStyleBackColor = true;
-            this.buttonToLogin.Click += new System.EventHandler(this.button1_Click_1);
+            this.buttonToLogin.Click += new System.EventHandler(this.buttonLogin);
             // 
             // buttonToExit
             // 
@@ -200,22 +200,22 @@ namespace QLDSV_TC
             this.bindingSource2.DataMember = "v_DSPHANMANH";
             this.bindingSource2.DataSource = this.qLDSV_TC_HOME;
             // 
-            // radioButton1
+            // radioButtonIsSV
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(186, 167);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(75, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "SINH VIÊN";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonIsSV.AutoSize = true;
+            this.radioButtonIsSV.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonIsSV.Location = new System.Drawing.Point(186, 167);
+            this.radioButtonIsSV.Name = "radioButtonIsSV";
+            this.radioButtonIsSV.Size = new System.Drawing.Size(75, 17);
+            this.radioButtonIsSV.TabIndex = 5;
+            this.radioButtonIsSV.TabStop = true;
+            this.radioButtonIsSV.Text = "SINH VIÊN";
+            this.radioButtonIsSV.UseVisualStyleBackColor = true;
             // 
             // Loginform
             // 
             this.ClientSize = new System.Drawing.Size(444, 255);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonIsSV);
             this.Controls.Add(this.buttonToExit);
             this.Controls.Add(this.buttonToLogin);
             this.Controls.Add(this.textBoxToPass);
@@ -244,15 +244,15 @@ namespace QLDSV_TC
         private System.Windows.Forms.Label label2;
         private QLDSV_TCDataSet qLDSV_TCDataSet;
         private System.Windows.Forms.BindingSource v_DSPHANMANHBindingSource;
-        private QLDSV_TCDataSetTableAdapters.v_DSPHANMANHTableAdapter v_DSPHANMANHTableAdapter;
+        //private QLDSV_TCDataSetTableAdapters.v_DSPHANMANHTableAdapter v_DSPHANMANHTableAdapter;
         private QLDSV_TCDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ComboBox tENPMComboBox;
+        //private System.Windows.Forms.ComboBox tENPMComboBox;
         private System.Windows.Forms.BindingSource vDSPHANMANHBindingSource;
-        private System.Windows.Forms.TextBox textBoxUsername;
-        private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.RadioButton radioButtonSV;
-        private System.Windows.Forms.Button buttonEXIT;
+        //private System.Windows.Forms.TextBox textBoxUsername;
+        //private System.Windows.Forms.TextBox textBoxPassword;
+        //private System.Windows.Forms.Button buttonLogin;
+        //private System.Windows.Forms.RadioButton radioButtonSV;
+        //private System.Windows.Forms.Button buttonEXIT;
         private QLDSV_TC_HOME qLDSV_TC_HOME;
         private System.Windows.Forms.BindingSource v_DSPHANMANHBindingSource1;
         private QLDSV_TC_HOMETableAdapters.v_DSPHANMANHTableAdapter v_DSPHANMANHTableAdapter1;
@@ -267,7 +267,7 @@ namespace QLDSV_TC
         private System.Windows.Forms.BindingSource vDSLTCBindingSource1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingSource bindingSource2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonIsSV;
     }
 }
 

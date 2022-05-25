@@ -41,9 +41,13 @@
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2" />
     <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPdfViewer.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -102,6 +106,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCVT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSV_TC_HOCPHI.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_TC_HOCPHI.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSV_TC_HOME.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_TC_HOME.xsd</DependentUpon>
     </Compile>
     <Compile Include="QLGIANGVIEN.cs">
       <SubType>Form</SubType>
@@ -192,6 +206,28 @@
     </None>
     <None Include="QLDSV_TCVT.xss">
       <DependentUpon>QLDSV_TCVT.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TC_HOCPHI.xsc">
+      <DependentUpon>QLDSV_TC_HOCPHI.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TC_HOCPHI.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_TC_HOCPHI.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_TC_HOCPHI.xss">
+      <DependentUpon>QLDSV_TC_HOCPHI.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TC_HOME.xsc">
+      <DependentUpon>QLDSV_TC_HOME.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_TC_HOME.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_TC_HOME.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_TC_HOME.xss">
+      <DependentUpon>QLDSV_TC_HOME.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

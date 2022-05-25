@@ -27,9 +27,9 @@ namespace QLDSV_TC
             da.Fill(dt);
             conn_publisher.Close();
             Program.bds_dspm.DataSource = dt;
-            tENPMComboBox.DataSource = Program.bds_dspm;
-            tENPMComboBox.DisplayMember = "TENPM";
-            tENPMComboBox.ValueMember = "TENSERVER";
+            tENPMComboBoxPHANMANH.DataSource = Program.bds_dspm;
+            tENPMComboBoxPHANMANH.DisplayMember = "TENPM";
+            tENPMComboBoxPHANMANH.ValueMember = "TENSERVER";
         }
 
         private int KetNoi_CSDLGOC()
@@ -54,17 +54,19 @@ namespace QLDSV_TC
             /*// TODO: This line of code loads data into the 'qLDSV_TC_HOME.v_DSLTC' table. You can move, or remove it, as needed.
             this.v_DSLTCTableAdapter.Fill(this.qLDSV_TC_HOME.v_DSLTC);
             // TODO: This line of code loads data into the 'qLDSV_TC_HOME.v_DSPHANMANH' table. You can move, or remove it, as needed.
-            this.v_DSPHANMANHTableAdapter1.Fill(this.qLDSV_TC_HOME.v_DSPHANMANH);*/
-
+            this.v_DSPHANMANHTableAdapter1.Fill(this.qLDSV_TC_HOME.v_DSPHANMANH);
+            */
             if (KetNoi_CSDLGOC() == 0) return;
-            LayDSPM("select * from v_DSPHANMANH");
-
+            LayDSPM("SELECT * FROM v_DSPHANMANH");
+            tENPMComboBoxPHANMANH.SelectedIndex = 1;
+            tENPMComboBoxPHANMANH.SelectedIndex = 0;
         }
 
         /// <summary>
         /// Button Login
-        private void button1_Click_1(object sender, EventArgs e)
+        private void buttonLogin(object sender, EventArgs e)
         {
+            isSinhVien = radioButtonIsSV.Checked;
             if (isSinhVien == false)
             {
                 if (textBoxToUsername.Text.Trim() == "" || textBoxToPass.Text.Trim() == "")
@@ -99,24 +101,71 @@ namespace QLDSV_TC
             Program.password = textBoxToPass.Text;
 
             //
-            Program.mChinhanh = tENPMComboBox.SelectedIndex;
+            Program.mChinhanh = tENPMComboBoxPHANMANH.SelectedIndex;
             Program.loginDN = Program.mlogin;
             Program.passwordDN = Program.password;
 
+            //====================================================================================//
+            string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_GV_Tu_Login '" + Program.mlogin + "'";
+            Program.myReader = Program.ExecSqlDataReader(strLenh);
+            if (Program.myReader == null) return;
+            Program.myReader.Read(); // Đọc 1 dòng nếu dữ liệu có nhiều dùng thì dùng for lặp nếu null thì break
+            Program.mGroup = Program.myReader.GetString(2);
+
+            if (isSinhVien == false)
+            {
+                Program.mHoten = Program.myReader.GetString(1);
+                Program.username = Program.myReader.GetString(0);
+            }
+            Program.myReader.Close();
+
+            string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + textBoxToUsername.Text + "', '" + textBoxToPass.Text + "'";
+            SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
+
+            if (reader.HasRows == false && isSinhVien == true)
+            {
+                MessageBox.Show("Đăng nhập thất bại! \nMã sinh viên không tồn tại");
+                return;
+            }
+
+            reader.Read();
+
+            if (Convert.IsDBNull(Program.username))
+            {
+                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (isSinhVien == true)
+            {
+                try
+                {
+                    Program.mHoten = reader.GetString(1);
+                    Program.username = reader.GetString(0);
+                }
+                catch (Exception) { }
+            }
+            Program.conn.Close();
+            reader.Close();
+            MessageBox.Show("Đăng nhập thành công !!!");
+            Form f = new RibbonMenu();
+            f.ShowDialog();
         }
 
         private void tENPMComboBoxPHANMANH_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                Program.severname = tENPMComboBox.SelectedValue.ToString();
+                Program.severname = tENPMComboBoxPHANMANH.SelectedValue.ToString();
             }
             catch (Exception) { }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Close(); Program.mainForm.Close();
+            
+            Close(); //Program.mainForm.Close();
         }
+
     }
 }

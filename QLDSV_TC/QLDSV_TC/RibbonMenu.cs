@@ -46,7 +46,7 @@ namespace QLDSV_TC
 
         private void barButtonItemQLGV_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form f = this.CheckExists(typeof(QLSINHVIEN));
+            Form f = this.CheckExists(typeof(QLGIANGVIEN));
             if (f != null) f.Activate();
             else
             {
